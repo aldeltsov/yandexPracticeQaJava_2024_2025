@@ -1,1 +1,1 @@
-yandexPracticeQaJava_2024_2025
+# yandexPracticeQaJava_2024_2025
