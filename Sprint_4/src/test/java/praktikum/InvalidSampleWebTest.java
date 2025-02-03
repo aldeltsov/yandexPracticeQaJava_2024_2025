@@ -21,8 +21,6 @@ public class InvalidSampleWebTest {
 
         mainPage.clickOrderStatus();
 
-        Thread.sleep(10_00);
-
         String invalidId = "123";
         mainPage.typeOrderId(invalidId);
 
