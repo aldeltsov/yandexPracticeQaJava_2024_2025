@@ -2,7 +2,11 @@ package praktikum.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import praktikum.EnvConfig;
+
+import java.time.Duration;
 
 public class MainPage {
     private final WebDriver driver;
@@ -28,6 +32,8 @@ public class MainPage {
 
     //ввод текста в поиск заказа
     public void typeOrderId(String orderId) {
+        new WebDriverWait(driver, Duration.ofSeconds(EnvConfig.TIMEOUT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(orderInputText));
         driver.findElement(orderInputText).sendKeys(orderId);
     }
 
